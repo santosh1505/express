@@ -23,7 +23,7 @@ router.get('/blog/:slug', (req, res) => {
   myblog = blog.find((e)=>{
   return e.slug==req.params.slug
   })
-  console.log(myblog)
+  console.log(myblog),
   res.sendFile(path.join(__dirname, '../templates/blogs.html'))
 })
 
